@@ -204,10 +204,10 @@ def eval():
 infinity = 100000
 
 def qsearch(ply, alpha, beta):
-    global board, nodes, seldepth, hb_max_time, start_time, tt_size
+    global board, nodes, seldepth, hb_max_time, start_time, tt_size, global_depth
 
     elapsed = (time.time() - start_time) * 1000
-    if elapsed > hb_max_time:
+    if global_depth > 1 and elapsed > hb_max_time:
         raise TimeoutError()
     stand_pat = eval()
     max = stand_pat
@@ -254,10 +254,10 @@ mate_score = 30000
 draw_score = 0
 
 def alphabeta(depth, ply, alpha, beta):
-    global board, nodes, seldepth, best_move, hb_max_time, start_time, tt_size
+    global board, nodes, seldepth, best_move, hb_max_time, start_time, tt_size, global_depth
 
     elapsed = (time.time() - start_time) * 1000
-    if depth > 1 and elapsed > hb_max_time:
+    if global_depth > 1 and elapsed > hb_max_time:
         raise TimeoutError()
     if board.is_checkmate():
         return -mate_score + ply
@@ -291,14 +291,16 @@ def alphabeta(depth, ply, alpha, beta):
 
     return max
 
+global_depth = 0
 def getbestmove():
-    global nodes, seldepth, sb_max_time, best_move
+    global nodes, seldepth, sb_max_time, best_move, global_depth
     seldepth = 0
     nodes = 0
     start_search_time = time.time()
 
     try:
         for depth in range(1, 256):
+            global_depth = depth
             score = int(alphabeta(depth, 0, -infinity, infinity))
             elapsed = time.time() - start_search_time
             print(f"info depth {depth} seldepth {seldepth} score cp {score} nodes {nodes} nps {int(nodes / (elapsed + 0.0000001))} time {int(elapsed * 1000)} pv {best_move}")
@@ -328,8 +330,8 @@ def parse_parameters(line):
 nodes = 0
 seldepth = 0
 best_move = None
-hbtm = 5
-sbtm = 30
+hbtm = 10
+sbtm = 40
 start_time = time.time()
 hb_max_time = 12_000
 sb_max_time = 2_000
