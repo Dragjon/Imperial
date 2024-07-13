@@ -365,8 +365,10 @@ def play_chess():
                 for move in moves:
                     board.push_uci(move)
         elif line.startswith("position fen"):
-            _, fen = line.split("fen", 1)
-            board.set_fen(fen.strip())
+            _, fen = line.split("fen ", 1)
+            fen = fen.split(" ")
+            fen = fen[0] + " " + fen[1] + " " + fen[2] + " " + fen[3] + " " + fen[4] + " " + fen[5]
+            board.set_fen(fen)
             if "moves" in line:
                 _, moves_part = line.split("moves")
                 moves = moves_part.strip().split()
