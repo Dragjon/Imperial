@@ -1,0 +1,94 @@
+{
+    "resign": {
+        "move_count": 1,
+        "score": 0,
+        "enabled": false
+    },
+    "draw": {
+        "move_number": 0,
+        "move_count": 1,
+        "score": 0,
+        "enabled": false
+    },
+    "opening": {
+        "file": "C:\\Users\\dragon\\Downloads\\8mvs_+90_+99.epd\\8mvs_+90_+99.epd",
+        "format": 0,
+        "order": 0,
+        "plies": -1,
+        "start": 0
+    },
+    "pgn": {
+        "file": "C:\\Users\\dragon\\Desktop\\CsharBugDetector\\Test114.pgn",
+        "notation": 0,
+        "track_nodes": false,
+        "track_seldepth": false,
+        "track_nps": false
+    },
+    "epd": {
+        "file": ""
+    },
+    "sprt": {
+        "alpha": 0.0,
+        "beta": 0.0,
+        "elo0": 0.0,
+        "elo1": 0.0,
+        "logistic_bounds": false
+    },
+    "event_name": "Fast Chess",
+    "site": "?",
+    "output": 0,
+    "seed": 3660642591,
+    "variant": 0,
+    "ratinginterval": 10,
+    "games": 2,
+    "rounds": 50,
+    "concurrency": 6,
+    "overhead": 0,
+    "recover": false,
+    "report_penta": true,
+    "affinity": true,
+    "randomseed": true,
+    "engines": [
+        {
+            "name": "Imperious-v0.0.1",
+            "dir": "",
+            "cmd": "C:\\Users\\dragon\\Desktop\\Imperious\\v0.0.1\\build\\exe.win-amd64-3.11\\imperious.exe",
+            "args": "",
+            "options": [],
+            "limit": {
+                "tc": {
+                    "increment": 200,
+                    "fixed_time": 0,
+                    "time": 20000,
+                    "moves": 0,
+                    "timemargin": 0
+                },
+                "nodes": 0,
+                "plies": 0
+            },
+            "variant": 0,
+            "recover": false
+        },
+        {
+            "name": "Stash9.0.1",
+            "dir": "",
+            "cmd": "C:\\Users\\dragon\\Downloads\\stash-9.0-windows-x86_64-modern.exe",
+            "args": "",
+            "options": [],
+            "limit": {
+                "tc": {
+                    "increment": 200,
+                    "fixed_time": 0,
+                    "time": 20000,
+                    "moves": 0,
+                    "timemargin": 0
+                },
+                "nodes": 0,
+                "plies": 0
+            },
+            "variant": 0,
+            "recover": false
+        }
+    ],
+    "stats": {}
+}

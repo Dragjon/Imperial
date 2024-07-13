@@ -261,7 +261,7 @@ def alphabeta(depth, ply, alpha, beta):
         raise TimeoutError()
     if board.is_checkmate():
         return -mate_score + ply
-    if board.can_claim_draw() or board.is_insufficient_material() or board.is_stalemate():
+    if ply != 0 and board.can_claim_draw() or board.is_insufficient_material() or board.is_stalemate():
         return draw_score
     if depth <= 0:
         return qsearch(ply, alpha, beta)
@@ -365,7 +365,7 @@ def play_chess():
                 for move in moves:
                     board.push_uci(move)
         elif line.startswith("position fen"):
-            _, fen = line.split("fen ", 1)
+            _, fen = line.split("fen ")
             fen = fen.split(" ")
             fen = fen[0] + " " + fen[1] + " " + fen[2] + " " + fen[3] + " " + fen[4] + " " + fen[5]
             board.set_fen(fen)
