@@ -330,8 +330,6 @@ def alphabeta(depth, ply, alpha, beta, parent_move):
     board_hash = chess.polyglot.zobrist_hash(board) % tt_size
     move_in_tt = tt_move[board_hash]
 
-    if move_in_tt == None:
-        depth -= 1
     legals = sorted(list(legals), key=lambda move: 
                     1_000_000_000 if move == move_in_tt else 
                     mvvlvaTable[piece_to_index[board.piece_at(move.from_square).piece_type]][piece_to_index[board.piece_at(move.from_square).piece_type]] if board.is_capture(move) else 
