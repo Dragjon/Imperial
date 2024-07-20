@@ -188,8 +188,8 @@ def eval():
             pc_type = piece_to_index[pc.piece_type]
             color = color_to_index[pc.color]
             square = square ^ 56 if color == 0 else square
-            mg[color] += mg_table[pc_type][square] + mg_value[pc_type]
-            eg[color] += eg_table[pc_type][square] + eg_value[pc_type]
+            mg[color] += mg_table[pc_type][square] + eg_value[pc_type]
+            eg[color] += eg_table[pc_type][square] + mg_value[pc_type]
             gamePhase += gamephaseInc[pc_type]
 
     mgScore = mg[side2move] - mg[otherside2move]
