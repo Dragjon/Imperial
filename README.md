@@ -1,6 +1,6 @@
 # Imperious
  [WIP] Chess engine in python
-# Elo
+# ELO
 | Version  | Elo gain from sprt |
 |----------|--------------------|
 | 0.0.7    | 9.2 +/- 7.4        |
