@@ -14,9 +14,6 @@
 ![Static Badge](https://img.shields.io/badge/Version-0.0.8-yellow?style=for-the-badge)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/dragjon/imperious?style=for-the-badge)
 
-<br>
-<br>
-
 </div>
 
 ## Overview
