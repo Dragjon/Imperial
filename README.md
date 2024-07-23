@@ -5,7 +5,7 @@
   alt="Javelin Logo"
   src="https://github.com/user-attachments/assets/3fc4366a-2332-4b44-bc84-888e8ad4b9d8">
 
-<h3>Imperious</h3>
+<h3>Imperial</h3>
 <b>A WIP Chess engine in python</b>
 <br>
 <br>
