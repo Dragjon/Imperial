@@ -22,6 +22,7 @@ Imperious was created out of boredom. After trying to improve my other engine Po
 ## ELO
 | Version  | Elo gain from sprt |
 | :-: | :-: |
+| 0.0.9    | -                  |
 | 0.0.8    | 8.5 +/- 6.7        |
 | 0.0.7    | 9.2 +/- 7.4        |
 | 0.0.6    | 36.1 +/- 20.1      |
