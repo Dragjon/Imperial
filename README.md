@@ -11,7 +11,7 @@
 <br>
 
 [![License](https://img.shields.io/github/license/Dragjon/Imperious?style=for-the-badge)](https://opensource.org/license/mit)
-![Static Badge](https://img.shields.io/badge/Version-0.0.8-yellow?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/Version-0.0.9-yellow?style=for-the-badge)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/dragjon/imperious?style=for-the-badge)
 
 </div>
